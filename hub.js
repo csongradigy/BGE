@@ -1,0 +1,3 @@
+'use strict';
+const feedback=document.getElementById('quiz-feedback');
+document.querySelectorAll('[data-answer]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-answer]').forEach(b=>{b.classList.remove('correct','wrong');b.setAttribute('aria-pressed','false')});button.setAttribute('aria-pressed','true');const correct=button.dataset.answer==='correct';button.classList.add(correct?'correct':'wrong');feedback.textContent=correct?'Correct. A short forward gains when the spot falls below K: 1,000 × (404 − 390) = +14,000 HUF.':'Try again. You agreed to sell at 404. At maturity, euros cost only 390. Use quantity × (delivery price − maturity spot).'}));
