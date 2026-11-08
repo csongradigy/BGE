@@ -1,30 +1,26 @@
-# BGE Learning Lab – feltöltési útmutató
+# BGE Tanulólabor – magyar és angol változat
 
-## Feltöltés a BGE repositoryba
+## Feltöltés a meglévő BGE repositoryba
 
-1. Csomagold ki a ZIP-et a gépeden.
-2. A BGE repository gyökerébe töltsd fel a kicsomagolt fájlokat ÉS mappákat. Ne magát a ZIP-et töltsd fel, és ne tedd őket még egy külső mappába.
-3. A GitHubon a feltöltéskor a mappákat is húzd be, hogy a belső szerkezetük megmaradjon.
-4. Settings → Pages → Deploy from a branch → main → / (root) → Save.
-5. A GitHub által megadott Pages-cím a főoldalt nyitja meg. A Forward Lab az alatta található forward-lab/ útvonalon érhető el.
+1. Csomagold ki a ZIP-et.
+2. A tartalmát, a mappákkal együtt töltsd fel a BGE repository gyökerébe. A meglévő azonos nevű fájlokat cseréld az új változatra.
+3. A külső ZIP-mappa és a ZIP-fájl nem kerül a repositoryba.
+4. A már beállított GitHub Pages maradjon main / (root). A feltöltés után a webcím nem változik.
+5. Frissítsd a weboldalt Ctrl+F5-tel, ha még a régi változat jelenik meg.
 
-## Fájlok
+## Szerkezet
 
-- index.html: angol hallgatói főoldal
-- hub.css és hub.js: a főoldal stílusa és rövid bemelegítő kérdése
-- forward-lab/: a teljes játék, ±2%-os válaszelfogadással
-- materials/: a 8 feladatos PowerPoint gyakorló
-- .nojekyll: közvetlen statikus kiszolgálás GitHub Pages alatt
+- index.html, hub.css: egyszerű főoldal a három gyakorló linkjével, tantárgynév és kiegészítő blokkok nélkül.
+- language.js, language.css: közös magyar–angol nyelvválasztó zászlókkal.
+- forward-lab/: határidős gyakorló, ±2%-os válaszelfogadással.
+- options-lab/: böngészőben futó opciós gyakorló. A korábbi Python-változat interaktív grafikonját, háromrészes feladatát és összefoglalóját tartalmazza.
+- normal-distribution/: az eredeti v7 angol és magyar gyakorló, nyelvválasztóval és főoldali visszalinkkel. A 4 tizedesjegyes válasz és a Casio fx-991CW útmutató megmaradt.
+- .nojekyll: közvetlen statikus kiszolgálás.
 
-A főoldalról megnyílik a játék, a játék fejlécéből vagy az „All activities” linkkel vissza lehet térni a főoldalra. Minden belső link relatív, ezért a /BGE/ alatti Pages-oldalon is működik.
+## Nyelvváltás
 
-## További játékok
+A HU és EN zászlós gombok jobb felül láthatók. A választás a böngészőben megmarad, és a főoldalról a játékba is átkerül. A határidős és opciós játék nyelvváltása nem törli az aktuális feladatot. A normális eloszlásos gyakorló nyelvváltása a megfelelő korábbi nyelvi változatot tölti be, ezért új feladatot generálhat.
 
-Minden új játék kerüljön külön mappába, a saját index.html fájljával. Például normal-distribution/index.html vagy bond-pricing/index.html.
-Az új játékhoz az index.html Games & simulations szakaszába vehető fel új hivatkozás az adott mappa relatív útvonalával. Csak a ténylegesen feltöltött játékokat jelenítsd meg.
+Az opciós és határidős eredményeknél a ±2%-os tolerancia a helyes válasz abszolút értékére vonatkozik, legalább 0,01 eltérést elfogadva. Az opciós gyakorló minden új feladatra egyszer ad pontot. A számítások nem tartalmazzák a pénz időértékét, költséget vagy adót.
 
-## Használat
-
-A főoldal és a játék angol nyelvű. A játék szimulált árakkal dolgozik, nem tölt le élő tőzsdei adatokat. A hallgatók eredményei a saját böngészőjükben tárolódnak, és CSV-be letölthetők. A tanári beállítások demonstrációt szolgálnak, nem védett vizsgakörnyezetet.
-
-A főoldal egyszerű BGE szöveges megjelölést használ, nem hivatalos egyetemi logót. A repositoryban már kiválasztott licencet ez a csomag nem cseréli le.
+A ZIP nem írja felül a repository meglévő licencét. A tanári beállítások nem vizsgabiztonsági védelem. Nincs élő árfolyam-adatkapcsolat vagy valódi kereskedés.
